@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Distribuição Binomial</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="tools">
+        <div class="circle">
+          <span class="red box"></span>
+        </div>
+        <div class="circle">
+          <span class="yellow box"></span>
+        </div>
+        <div class="circle">
+          <span class="green box"></span>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="texto">
+          <h1>Distribuição Binomial</h1>
+        </div>
+        <form class="formulario" action="" method="post">
+          <div class="primeiro-campo">
+            <label for="vezes">Digite o total de vezes: </label>
+            <input placeholder="Adicione o total de repetições. EX.: 6" class="input-style" type="number" name="vezes" id="vezes">
+          </div>
+          <div class="segundo-campo">
+            <label for="probabilidade">Digite a probabilidade: </label>
+            <input placeholder="Adicione a probabilidade. EX.: 0.5" class="input-style" type="number" name="probabilidade" id="probabilidade">
+          </div>
+        </form>
+        <div class="grafico">
+          <canvas id="binomialChart" width="0" height="0"></canvas>
+        </div>
+        <script src="./scripts/script.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
