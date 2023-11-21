@@ -20,16 +20,21 @@ function calcularFatorial(numero) {
 }
 
 function distribuicaoBinomial() {
-  let resultados = [];
-  for (let k = 0; k <= totalVezes.value; k++) {
-    let combinacao = calcularCombinacao(totalVezes.value, k);
-    let probabilidade =
-      combinacao *
-      Math.pow(totalProbabilidade.value, k) *
-      Math.pow(1 - totalProbabilidade.value, totalVezes.value - k);
-    resultados.push(probabilidade);
+  let probabilidade = parseFloat(totalProbabilidade.value);
+  let vezes = parseInt(totalVezes.value);
+
+  if (probabilidade >= 0 && probabilidade <= 1) {
+    let resultados = [];
+    for (let k = 0; k <= vezes; k++) {
+      let combinacao = calcularCombinacao(vezes, k);
+      let probabilidadeCalculada =
+        combinacao *
+        Math.pow(probabilidade, k) *
+        Math.pow(1 - probabilidade, vezes - k);
+      resultados.push(probabilidadeCalculada);
+    }
+    return resultados;
   }
-  return resultados;
 }
 
 function plotChart() {
